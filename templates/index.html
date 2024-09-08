@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phishing Link Scanner</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        color: white;
+      }
+      .container {
+        max-width: 600px;
+        margin: auto;
+        text-align-last: center;
+        
+        padding: 70px;
+        background-color: cadetblue;
+      }
+      input[type="text"] {
+        width: calc(100% - 22px);
+        padding: 10px;
+        margin: 10px 0;
+      }
+      input[type="submit"] {
+        padding: 10px 20px;
+        margin: 10px;
+        border: none;
+        color: cadetblue;
+        border-radius: 5px
+      }
+      .result {
+        margin-top: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Phishing Link Scanner</h1>
+      
+      <form method="post">
+        <label for="url">Enter URL to Scan:</label>
+        <input
+          type="text"
+          id="url"
+          name="url"
+          placeholder="http://example.com"
+          required
+        />
+        <input type="submit" value="Scan URL" />
+      </form>
+      <div class="result">{{ result }}</div>
+    </div>
+  </body>
+</html>
